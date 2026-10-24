@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10111b" />
+  <meta name="description" content="Tu estudio creativo gratuito en un solo lugar." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <title>Creativa Studio</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">✦</div>
+      <div class="brand-copy"><strong>creativa<span> studio</span></strong><small>Tu espacio para crear</small></div>
+      <button class="avatar" aria-label="Perfil">L</button>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <div class="eyebrow"><span class="pulse"></span> TU ESTUDIO CREATIVO</div>
+        <h1>Las ideas merecen<br><span>tomar forma.</span></h1>
+        <p>Diseña, edita y crea desde un solo lugar.</p>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-orb orb-one"></div><div class="art-orb orb-two"></div>
+          <div class="art-card card-back">✳</div><div class="art-card card-front"><span>MAKE</span><b>something<br>beautiful.</b><i>✦</i></div>
+          <div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div>
+        </div>
+      </section>
+
+      <section class="section-head"><div><span class="section-kicker">EMPIEZA AQUÍ</span><h2>Tus herramientas</h2></div><span class="free-pill">100% gratis</span></section>
+      <section class="tool-grid" aria-label="Herramientas creativas">
+        <button class="tool-tile tile-photo" data-tool="photo"><span class="tool-icon">◉</span><span class="tool-title">Foto y color</span><span class="tool-desc">Ajusta y mejora imágenes</span><span class="tile-arrow">↗</span></button>
+        <button class="tool-tile tile-draw" data-tool="draw"><span class="tool-icon">✎</span><span class="tool-title">Dibujo</span><span class="tool-desc">Dibuja y crea bocetos</span><span class="tile-arrow">↗</span></button>
+        <button class="tool-tile tile-video" data-tool="video"><span class="tool-icon">▷</span><span class="tool-title">Vídeo</span><span class="tool-desc">Reproduce tus clips</span><span class="tile-arrow">↗</span></button>
+        <button class="tool-tile tile-audio" data-tool="audio"><span class="tool-icon">♫</span><span class="tool-title">Audio</span><span class="tool-desc">Escucha tus archivos</span><span class="tile-arrow">↗</span></button>
+        <button class="tool-tile tile-pdf" data-tool="pdf"><span class="tool-icon">▤</span><span class="tool-title">PDF y archivos</span><span class="tool-desc">Abre y consulta documentos</span><span class="tile-arrow">↗</span></button>
+        <button class="tool-tile tile-motion" data-tool="motion"><span class="tool-icon">✺</span><span class="tool-title">Animación</span><span class="tool-desc">Crea movimiento sencillo</span><span class="tile-arrow">↗</span></button>
+      </section>
+
+      <section class="quick-panel">
+        <div class="quick-icon">✧</div><div class="quick-copy"><strong>Tu creatividad, a tu manera</strong><p>Esta primera versión procesa tus archivos localmente en el dispositivo.</p></div>
+      </section>
+      <section class="section-head projects-head"><div><span class="section-kicker">ESPACIO DE TRABAJO</span><h2>Área de prueba</h2></div></section>
+      <div class="project-empty"><div class="empty-icon">＋</div><strong>Tu próximo proyecto empieza aquí</strong><p>Abre una herramienta de arriba para probarla. Más módulos se podrán añadir después.</p></div>
+    </main>
+    <nav class="bottom-nav"><button class="nav-item active"><span>⌂</span>Inicio</button><button class="nav-item" id="nav-tools"><span>✦</span>Herramientas</button><button class="nav-item" id="nav-info"><span>ⓘ</span>Acerca de</button></nav>
+  </div>
+
+  <div class="modal-backdrop" id="tool-modal" hidden>
+    <section class="tool-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head"><div><span class="section-kicker" id="modal-kicker">HERRAMIENTA</span><h2 id="modal-title">Foto y color</h2></div><button class="close-modal" id="close-modal" aria-label="Cerrar">×</button></div>
+      <div id="tool-content"></div>
+    </section>
+  </div>
+  <input type="file" id="file-picker" hidden />
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
